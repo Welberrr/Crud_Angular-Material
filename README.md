@@ -1,90 +1,87 @@
-# 🧩 Angular Clients CRUD
+# 👥 Angular Material Clients Manager
 
-## 📄 Descrição
-Este é um projeto desenvolvido para demonstrar e praticar habilidades com **Angular**.  
-A aplicação consiste em um **CRUD (Create, Read, Update, Delete)** completo de clientes, com toda a interface estilizada utilizando os componentes do **Angular Material**.
+> Sistema de Gestão de Clientes (CRUD) Full-SPA desenvolvido com a robustez do **Angular 18** e a elegância do **Angular Material**.
 
-O principal objetivo deste projeto é servir como um **item de portfólio**, evidenciando o conhecimento em funcionalidades essenciais do framework Angular, como **componentização**, **consumo de APIs externas**, **reatividade** e **manipulação de formulários**.
+![Angular Badge](https://img.shields.io/badge/Angular-18-DD0031?style=for-the-badge&logo=angular&logoColor=white)
+![Material Badge](https://img.shields.io/badge/Angular_Material-UI-3F51B5?style=for-the-badge&logo=angular&logoColor=white)
+![BrasilAPI Badge](https://img.shields.io/badge/API-BrasilAPI-009C3B?style=for-the-badge&logo=brazil&logoColor=white)
 
-Além das operações básicas de um CRUD, a aplicação se integra à **API governamental do IBGE**.  
-O usuário seleciona um **Estado** em um campo de seleção e, com base nessa escolha, um segundo campo é populado dinamicamente com os **municípios correspondentes**, demonstrando a integração com serviços de terceiros e a reatividade da aplicação.
+---
 
-A **base de dados é local**, armazenada **no próprio navegador** (utilizando LocalStorage), garantindo persistência simples e independente de servidor.
+## 💻 Sobre o Projeto
+
+Este projeto é uma **Single Page Application (SPA)** focada em demonstrar as melhores práticas de desenvolvimento Front-End moderno.
+
+Mais do que um simples cadastro, a aplicação implementa um ecossistema reativo onde a experiência do usuário é prioridade. O sistema utiliza **LocalStorage** para persistência de dados (simulando um Backend) e consome a **BrasilAPI** para fornecer dados geográficos reais e atualizados do IBGE.
+
+### 🎯 Destaques Técnicos
+* **Componentização Inteligente:** Separação clara entre responsabilidades de Cadastro e Consulta.
+* **Integração de APIs:** Consumo de dados externos (REST) para popular selects dinâmicos (Estados/Cidades).
+* **UX Profissional:** Uso extensivo de componentes do Angular Material (Tables, Dialogs, Snackbars, Form Fields).
 
 ---
 
 ## ✨ Funcionalidades
 
-- **Cadastro de Clientes:** Formulário para adicionar novos clientes.  
-- **Listagem de Clientes:** Exibição dos clientes cadastrados em uma tabela moderna e responsiva.  
-- **Edição de Clientes:** Possibilidade de atualizar as informações de um cliente existente.  
-- **Exclusão de Clientes:** Opção para remover um cliente da base de dados.  
-- **Seleção de Localidade (IBGE API):** Integração com a API de localidades do IBGE.  
-  A seleção de um Estado popula dinamicamente um segundo campo de seleção com seus respectivos municípios.  
-- **Base de Dados Local:** Os dados são armazenados diretamente no navegador, sem necessidade de backend.  
-- **Interface com Angular Material:** Todos os componentes visuais (tabelas, botões, modais e formulários) são estilizados com Angular Material, garantindo um design limpo e profissional.
+* ✅ **CRUD Completo:** Criação, Leitura, Atualização e Remoção de clientes.
+* ✅ **Busca de Endereço Dinâmica:** Integração com a **BrasilAPI**. Ao selecionar um Estado (UF), o sistema busca automaticamente os municípios correspondentes via HTTP.
+* ✅ **Persistência Local:** Os dados são salvos no `LocalStorage` do navegador, mantendo o cadastro mesmo após recarregar a página.
+* ✅ **Interface Responsiva:** Tabelas com paginação e formulários adaptáveis.
 
 ---
 
-## 💻 Telas do Projeto
+## 📸 Telas do Projeto
 
-### 🗂️ Tela de Consulta (Listagem de Clientes)
+### 🗂️ Tela de Consulta (Dashboard)
+Visualização de dados em tabela estilizada com ações rápidas.
+![Tela de Consulta](image-1.png)
 
-![alt text](image-1.png)
-
----
-
-### 🧾 Tela de Cadastro/Edição de Cliente
-
-![alt text](image.png)
+### 🧾 Formulário de Cadastro
+Formulário com validação e carregamento dinâmico de cidades.
+![Tela de Cadastro](image.png)
 
 ---
 
 ## 🚀 Tecnologias Utilizadas
 
-- **Angular 20**  
-- **Angular CLI**  
-- **Angular Material**  
-- **TypeScript**  
-- **RxJS** para programação reativa  
-- **HTML5 & SCSS**
+* **Framework:** [Angular v18](https://angular.io/) (Core)
+* **UI Kit:** [Angular Material](https://material.angular.io/) (Design System)
+* **Linguagem:** TypeScript 5.5
+* **Reatividade:** RxJS (Observables e Subjects)
+* **Estilização:** SCSS (Sass)
+* **Dados Externos:** [BrasilAPI](https://brasilapi.com.br/) (Fonte de dados do IBGE)
 
 ---
 
-## ✅ Pré-requisitos
+## ⚙️ Instalação e Execução
 
-Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+Siga os passos abaixo para rodar o projeto localmente:
 
-- [Node.js](https://nodejs.org/) — (recomendada a versão **LTS**)  
-- [Angular CLI](https://angular.io/cli) — Instalação: 
+### Pré-requisitos
+* Node.js (LTS v18 ou superior)
+* Angular CLI instalado globalmente (`npm install -g @angular/cli`)
 
-  ```bash
-  npm install -g @angular/cli
+### Passo a Passo
 
-⚙️ Instalação e Execução
+1. **Clone o repositório:**
+   ```bash
+   git clone [https://github.com/Welberrr/Academic_Crud-Angular-Material.git](https://github.com/Welberrr/Academic_Crud-Angular-Material.git)
+2. Acesse o diretório:
 
-Clone este repositório:
+Bash
 
-git clone https://github.com/Welberrr/Academic_Crud-Angular-Material.git
+cd Academic_Crud-Angular-Material
 
+3. Instale as dependências:
 
-Acesse o diretório do projeto:
-
-cd angular-clients-crud
-
-
-Instale as dependências:
+Bash
 
 npm install
 
+4. Execute o servidor:
 
-Execute o servidor de desenvolvimento:
+Bash
 
 ng serve
 
-📝 Licença
-
-Este projeto está sob a licença MIT.
-Veja o arquivo LICENSE para mais detalhes.
-
-👨‍💻 Desenvolvido por Welber Henrique
+5. Acesse: Abra seu navegador em http://localhost:4200/
